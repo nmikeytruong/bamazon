@@ -3,7 +3,7 @@ require("dotenv").config();
 var mysql = require("mysql");
 var inquirer = require("inquirer");
 require("console.table");
-var keys = require("./keys.js");
+var passwords = require("./passwords.js");
 
 
 // connection to sync with MySQL database
@@ -11,7 +11,7 @@ var connection = mysql.createConnection({
   host: "localhost",
   port: 3306,
   user: "root",
-  password: keys.password,
+  password: passwords.password,
   database: "bamazon"
 });
 
